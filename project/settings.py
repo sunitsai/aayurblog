@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'y03gpy4^7debybrc7up90(=4&!xyy(_-mz(ipwf2msj^2xbwi1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['aayurblog.herokuapp.com']
 
 
 # Application definition
