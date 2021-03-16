@@ -1,0 +1,96 @@
+{% extends "app/base.html" %}
+
+{% block content %}
+
+        <!--page-title-two-->
+        <section class="page-title-two">
+            <div class="title-box centred bg-color-2">
+                <div class="pattern-layer">
+                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-70.png);"></div>
+                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-71.png);"></div>
+                </div>
+                <div class="auto-container">
+                    <div class="title">
+                        <h1>Become Seller</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-content">
+                <div class="auto-container">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li>Become Seller</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--page-title-two end-->
+
+
+        <!-- registration-section -->
+        <section class="registration-section bg-color-3">
+            <div class="pattern">
+                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-85.png);"></div>
+                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-86.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="inner-box">
+                    <div class="content-box">
+                        {% if msg %}
+
+
+                        <center><h3 style="color: green;">{{msg}}</h3></center>
+
+                        {% endif %}
+                        <div class="title-box">
+                            <h3>Become Seller Form</h3>
+                            
+                        </div>
+                        <div class="inner">
+                           
+                            <form action="{% url 'insert' %}" method="post" class="registration-form">
+                                {% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <label>Fast name</label>
+                                        <input type="text" name="fname" placeholder="Enter your name" required="">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                        <label>Last name</label>
+                                        <input type="text" name="lname" placeholder="Enter your name" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>Email</label>
+                                        <input type="email" name="email" placeholder="Enter your email" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>Contact</label>
+                                        <input type="text" name="contact" placeholder="Your Contact" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>Business Name</label>
+                                        <input type="text" name="bname" placeholder="Your Business name" required="">
+                                    </div>
+                                    <!-- <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>State</label>
+                                        <input type="text" name="state" placeholder="Enter State" required="">
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                        <label>Business Name</label>
+                                        <input type="text" name="bname" placeholder="Your Business name" required="">
+                                    </div> -->
+                                 
+                                    <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                        <button type="submit" class="theme-btn-one">Submit<i class="icon-Arrow-Right"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- registration-section end -->
+
+{% endblock %}

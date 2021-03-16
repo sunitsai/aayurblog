@@ -1,0 +1,155 @@
+{% extends 'app/base.html' %}
+{% block content %}
+<!--page-title-two-->
+        <section class="page-title-two">
+            <div class="title-box centred bg-color-2">
+                <div class="pattern-layer">
+                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-70.png);"></div>
+                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-71.png);"></div>
+                </div>
+                <div class="auto-container">
+                    <div class="title">
+                        <h1>Aayurtree Blogs</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-content">
+                <div class="auto-container">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li>Aayurtree Blogs</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--page-title-two end-->
+
+
+        <!-- sidebar-page-container -->
+        <section class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="blog-standard-content">
+                            {% if key2 %}
+                            {% for i in key2 %}
+                            <div class="news-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img src="{{MEDIA_URL}}{{i.image.url}}" alt="" width="500" height="500">
+                                        <a href="blog-details-2.html" class="link"><i class="fas fa-link"></i></a>
+                                        <span class="category">{{i.cat_id.c_name}}</span>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <h3><a href="{% url 'blogdetails' pk=i.id %}">{{i.Title}}</a></h3>
+                                        <ul class="post-info">
+                                            <li><img src="{{MEDIA_URL}}{{i.authorimg.url}}" alt="" width="60px" height="60px"><a href="#">{{i.author}}</a></li>
+                                            <li>{{i.is_created}}</li>
+                                        </ul>
+                                        <p>{{i.shortcontent}}</p>
+                                        <div class="link"><a href="{% url 'blogdetails' pk=i.id %}"><i class="icon-Arrow-Right"></i></a></div>
+                                        <div class="btn-box"><a href="{% url 'blogdetails' pk=i.id %}" class="theme-btn-one">Read more<i class="icon-Arrow-Right"></i></a></div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                           
+                            <div class="pagination-wrapper">
+                                <ul class="pagination">
+                                    <li><a href="clinic-1.html" class="current">1</a></li>
+                                    <li><a href="clinic-1.html">2</a></li>
+                                    <li><a href="clinic-1.html">3</a></li>
+                                    <li><a href="clinic-1.html"><i class="icon-Arrow-Right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="blog-sidebar">
+                            <!-- <div class="sidebar-widget sidebar-search">
+                                <div class="widget-title">
+                                    <h3>Search</h3>
+                                </div>
+                                <div class="search-inner">
+                                    <form action="http://azim.commonsupport.com/Docpro/blog-3.html" method="post" class="search-form">
+                                        <div class="form-group">
+                                            <input type="search" name="search-field" placeholder="Search" required="">
+                                            <button type="submit"><i class="fas fa-search"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> -->
+                            {% if key3 %}
+                            <div class="sidebar-widget category-widget">
+                                <div class="widget-title">
+                                    <h3>Categories</h3>
+                                </div>
+                                
+                                <div class="widget-content">
+                                    <ul class="category-list clearfix">
+                                        {% for i in key3 %}
+                                        <li><a href="{% url 'sortcat' pk=i.id %}">{{i.c_name}}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                                {% endif %}
+                            </div>
+                            <!-- <div class="sidebar-widget post-widget">
+                                <div class="widget-title">
+                                    <h3>Recent Posts</h3>
+                                </div>
+                                <div class="post-inner">
+                                    <div class="post">
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-1.jpg" alt=""></a></figure>
+                                        <h5><a href="blog-details.html">Baking can be done with a few things.</a></h5>
+                                        <p>April 10, 2020</p>
+                                    </div>
+                                    <div class="post">
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-2.jpg" alt=""></a></figure>
+                                        <h5><a href="blog-details.html">Great food is not just eating energy.</a></h5>
+                                        <p>April 09, 2020</p>
+                                    </div>
+                                    <div class="post">
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-3.jpg" alt=""></a></figure>
+                                        <h5><a href="blog-details.html">The smell of good bread baking.</a></h5>
+                                        <p>April 08, 2020</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="sidebar-widget archives-widget">
+                                <div class="widget-title">
+                                    <h3>Archives</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="archives-list clearfix">
+                                        <li><a href="blog-details.html">November 2016 <span>(5)</span></a></li>
+                                        <li><a href="blog-details.html">December 2017 <span>(7)</span></a></li>
+                                        <li><a href="blog-details.html">January 2018 <span>(3)</span></a></li>
+                                        <li><a href="blog-details.html">February 2019 <span>(2)</span></a></li>
+                                        <li><a href="blog-details.html">March 2020 <span>(9)</span></a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <!-- <div class="sidebar-widget sidebar-tags">
+                                <div class="widget-title">
+                                    <h3>Tags</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="tags-list clearfix">
+                                        <li><a href="blog-details.html">Medicine</a></li>
+                                        <li><a href="blog-details.html">Treatment</a></li>
+                                        <li><a href="blog-details.html">Pills</a></li>
+                                        <li><a href="blog-details.html">Specialist</a></li>
+                                        <li><a href="blog-details.html">Doctors</a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sidebar-page-container end -->
+
+{% endblock %}

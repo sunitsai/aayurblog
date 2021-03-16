@@ -1,0 +1,261 @@
+        
+{% extends 'app/base.html' %}
+{% block content %}
+        <!--page-title-two-->
+        <section class="page-title-two">
+            <div class="title-box centred bg-color-2">
+                <div class="pattern-layer">
+                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-70.png);"></div>
+                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-71.png);"></div>
+                </div>
+                <div class="auto-container">
+                    <div class="title">
+                        <h1>Blog Details</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-content">
+                <div class="auto-container">
+                    <ul class="bread-crumb clearfix">
+                        <li><a href="index-2.html">Home</a></li>
+                        <li>Blog Details</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!--page-title-two end-->
+
+{% if key4 %}
+        {% if msg %}
+            <h3 style="color: green;">{{msg}}</h3>
+        {% endif %}
+        <!-- sidebar-page-container -->
+        <section class="sidebar-page-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-8 col-md-12 col-sm-12 content-side">
+                        <div class="blog-details-content">
+                            <div class="news-block-one">
+                                <div class="inner-box">
+                                    <figure class="image-box">
+                                        <img src="{{MEDIA_URL}}{{key4.image.url}}" alt="">
+                                        <span class="category">{{key4.cat_id.c_name}}</span>
+                                    </figure>
+                                    <div class="lower-content">
+                                        <h3>{{key4.Title}}</h3>
+                                        <ul class="post-info">
+                                            <li><img src="{{MEDIA_URL}}{{key4.authorimg.url}}" alt="" width="60px" height="60px"><a href="#">{{key4.author}}</a></li>
+                                            <li>{{key4.is_created}}</li>
+                                        </ul>
+                                        <p><li>{{key4.content|safe}}</li></p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <blockquote>
+                                <i class="fas fa-quote-left"></i>
+                                <p>“Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor in reprehen</p>
+                            </blockquote>
+                            <div class="two-column">
+                                <div class="row clearfix">
+                                    <div class="col-lg-6 col-md-6 col-sm-12 image-column">
+                                        <figure class="image-box"><img src="assets/images/news/news-19.jpg" alt=""></figure>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 text-column">
+                                        <div class="text">
+                                            <h3>Two Most-Cited Reason</h3>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            <p>enim ad minim veniam quis nostrud exercitat ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+                                            <ul class="list clearfix">
+                                                <li>Success is something of which we want.</li>
+                                                <li>Most people believe that success is difficult.</li>
+                                                <li>the four levels of the healthcare system</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <h3>Two Most-Cited Reason</h3>
+                                <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure dolor.</p>
+                            </div>
+                            <div class="post-share-option clearfix">
+                                <div class="text pull-left"><h4>We Are Social On:</h4></div>
+                                <ul class="social-links clearfix pull-right">
+                                    <li><a href="blog-details.html"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="blog-details.html"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="blog-details.html"><i class="fab fa-google-plus-g"></i></a></li>
+                                </ul>
+                            </div>
+                            <div class="comment-box">
+                                <div class="group-title">
+                                    <h3>Comments</h3>
+                                </div>
+                                <div class="comment">
+                                    <figure class="thumb-box">
+                                        <img src="assets/images/news/comment-1.png" alt="">
+                                    </figure>
+                                    <div class="comment-inner">
+                                        <div class="comment-info">
+                                            <h5>Leroy Anderson</h5>
+                                            <span class="comment-time">April 10, 2020</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incidid unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris.</p>
+                                        <a href="blog-details.html" class="reply-btn">Reply</a>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <figure class="thumb-box">
+                                        <img src="assets/images/news/comment-2.png" alt="">
+                                    </figure>
+                                    <div class="comment-inner">
+                                        <div class="comment-info">
+                                            <h5>Leroy Anderson</h5>
+                                            <span class="comment-time">April 09, 2020</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incidid unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris.</p>
+                                        <a href="blog-details.html" class="reply-btn">Reply</a>
+                                    </div>
+                                </div>
+                                <div class="comment">
+                                    <figure class="thumb-box">
+                                        <img src="assets/images/news/comment-3.png" alt="">
+                                    </figure>
+                                    <div class="comment-inner">
+                                        <div class="comment-info">
+                                            <h5>Leroy Anderson</h5>
+                                            <span class="comment-time">April 08, 2020</span>
+                                        </div>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incidid unt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris.</p>
+                                        <a href="blog-details.html" class="reply-btn">Reply</a>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="comments-form-area">
+                                <div class="group-title">
+                                    <h3>Leave a Comment</h3>
+                                </div>
+                                <form action="{% url 'comment' pk=key4.id %}" method="post" class="comment-form">
+                                    {% csrf_token %}
+                                    <input type="text" name="pid" id="" value="{{key4.id}}">
+                                    <div class="row clearfix">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                            <input type="text" name="fname" placeholder="First Name" required="">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                            <input type="text" name="lname" placeholder="Last Name" required="">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                            <input type="email" name="email" placeholder="Email Address" required="">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                            <input type="text" name="contact" placeholder="Phone" required="">
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                            <textarea name="message" placeholder="Leave A Comment"></textarea>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 form-group message-btn">
+                                            <button type="submit" class="theme-btn-one">Send Message<i class="icon-Arrow-Right"></i></button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12 col-sm-12 sidebar-side">
+                        <div class="blog-sidebar">
+                            <!-- <div class="sidebar-widget sidebar-search">
+                                <div class="widget-title">
+                                    <h3>Search</h3>
+                                </div>
+                                <div class="search-inner">
+                                    <form action="http://azim.commonsupport.com/Docpro/blog-3.html" method="post" class="search-form">
+                                        <div class="form-group">
+                                            <input type="search" name="search-field" placeholder="Search" required="">
+                                            <button type="submit"><i class="fas fa-search"></i></button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div> -->
+                            <div class="sidebar-widget category-widget">
+                                <div class="widget-title">
+                                    <h3>Categories</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="category-list clearfix">
+                                        {% if key5 %}
+                                        <div class="widget-content">
+                                            <ul class="category-list clearfix">
+                                                {% for i in key5 %}
+                                                <form action="{% url 'sortcat' pk=i.id %}" method="post">
+                                                    {% csrf_token %}
+                                                    <input type="hidden" name="category" value="{{i.c_name}}">
+                                                <li><button>{{i.c_name}}</button></li>
+                                                {% endfor %}
+                                                </form>
+                                            </ul>
+                                        </div>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- <div class="sidebar-widget post-widget">
+                                <div class="widget-title">
+                                    <h3>Recent Posts</h3>
+                                </div>
+                                <div class="post-inner">
+                                    <div class="post">
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-1.jpg" alt=""></a></figure>
+                                        <h5><a href="blog-details.html">Baking can be done with a few things.</a></h5>
+                                        <p>April 10, 2020</p>
+                                    </div>
+                                    <div class="post">
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-2.jpg" alt=""></a></figure>
+                                        <h5><a href="blog-details.html">Great food is not just eating energy.</a></h5>
+                                        <p>April 09, 2020</p>
+                                    </div>
+                                    <div class="post">
+                                        <figure class="post-thumb"><a href="blog-details.html"><img src="assets/images/news/post-3.jpg" alt=""></a></figure>
+                                        <h5><a href="blog-details.html">The smell of good bread baking.</a></h5>
+                                        <p>April 08, 2020</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="sidebar-widget archives-widget">
+                                <div class="widget-title">
+                                    <h3>Archives</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="archives-list clearfix">
+                                        <li><a href="blog-details.html">November 2016 <span>(5)</span></a></li>
+                                        <li><a href="blog-details.html">December 2017 <span>(7)</span></a></li>
+                                        <li><a href="blog-details.html">January 2018 <span>(3)</span></a></li>
+                                        <li><a href="blog-details.html">February 2019 <span>(2)</span></a></li>
+                                        <li><a href="blog-details.html">March 2020 <span>(9)</span></a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <!-- <div class="sidebar-widget sidebar-tags">
+                                <div class="widget-title">
+                                    <h3>Tags</h3>
+                                </div>
+                                <div class="widget-content">
+                                    <ul class="tags-list clearfix">
+                                        <li><a href="blog-details.html">Medicine</a></li>
+                                        <li><a href="blog-details.html">Treatment</a></li>
+                                        <li><a href="blog-details.html">Pills</a></li>
+                                        <li><a href="blog-details.html">Specialist</a></li>
+                                        <li><a href="blog-details.html">Doctors</a></li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- sidebar-page-container end -->
+
+{% endif %}
+
+{% endblock %}

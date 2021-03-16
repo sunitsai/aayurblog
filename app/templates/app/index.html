@@ -1,0 +1,250 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block content %}
+
+        <!-- banner-section -->
+        <section class="banner-section centred style-three" style="background-image: url({% static '/app/assets/images/banner/banner-bg-2.jpg' %}); background-color: red;">
+            <div class="anim-icon">
+                <div class="icon icon-1 float-bob-y" style="background-image: url({% static '/app/assets/images/icons/anim-icon-1.png' %});"></div>
+                <div class="icon icon-2" style="background-image: url({% static '/app/assets/images/icons/anim-icon-2.png' %});"></div>
+                <div class="icon icon-3 rotate-me" style="background-image: url({% static '/app/assets/images/icons/anim-icon-3.png' %});"></div>
+                <div class="icon icon-4 rotate-me" style="background-image: url({% static '/app/assets/images/icons/anim-icon-4.png' %});"></div>
+                <div class="icon icon-5" style="background-image: url({% static '/app/assets/images/icons/anim-icon-5.png' %});"></div>
+                <div class="icon icon-6" style="background-image: url({% static '/app/assets/images/icons/anim-icon-6.png' %});"></div>
+                <div class="icon icon-7" style="background-image: url({% static '/app/assets/images/icons/anim-icon-7.png' %});"></div>
+                <div class="icon icon-8 float-bob-y" style="background-image: url({% static '/app/assets/images/icons/anim-icon-8.png' %});"></div>
+            </div>
+            <div class="pattern-layer" style="background-image: url({% static '/app/assets/images/shape/shape-67.png' %});"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <h1>Find New Ayurveda Products</h1>
+                    <p style="font-size:60px; font-family: 'Courier New', Courier, monospace;"><strong>Coming Soon</strong></p>
+                   
+                  
+                    <p id="commingsoon-count" style="font-size:30px; "></p>
+                    <!-- <div class="form-inner">
+                        <form action="http://azim.commonsupport.com/Docpro/index.html" method="post">
+                            <div class="form-group">
+                                <input type="text" name="name" placeholder="Ex. Name, Specialization..." required="">
+                                <button type="submit"><i class="icon-Arrow-Right"></i></button>
+                            </div>
+                        </form>
+                         <ul class="select-box clearfix">
+                            <li>
+                                <div class="single-checkbox">
+                                    <input type="radio" name="check-box" id="check1" checked="">
+                                    <label for="check1"><span></span>All</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-checkbox">
+                                    <input type="radio" name="check-box" id="check2">
+                                    <label for="check2"><span></span>Doctor</label>    
+                                </div>
+                            </li>
+                            <li>
+                                <div class="single-checkbox">
+                                    <input type="radio" name="check-box" id="check3">
+                                    <label for="check3"><span></span>Clinic</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!-- banner-section end -->
+
+
+        <!-- category-section -->
+        <section class="category-section bg-color-3 centred">
+            <div class="pattern-layer">
+                <div class="pattern-1" style="background-image: url(assets/images/shape/shape-47.png);"></div>
+                <div class="pattern-2" style="background-image: url(assets/images/shape/shape-48.png);"></div>
+            </div>
+            <div class="auto-container">
+                <div class="sec-title centred">
+                    <h2>App Screen Shots</h2>
+                </div>
+
+                <!-- slider  -->
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <img src="{% static '/img_new/SignupUI.jpg' %}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static '/img_new/LoginUi.jpg' %}" alt="">
+                    </div>
+                    <div class="item">
+                        <img src="{% static '/img_new/ProductUI.jpg' %}" alt="">
+                    </div>
+                    
+                </div>
+           
+            <div class="auto-container">
+                <div class="sec-title centred">
+                    
+                    <h2>Our Products</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item1.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 1</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item2.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 2</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="400ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item3.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 3</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item4.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 4</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="00ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item5.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 5</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="200ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item6.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 6</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="400ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item7.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 7</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 category-block">
+                        <div class="category-block-one wow fadeInUp animated animated" data-wow-delay="600ms" data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <div class="pattern">
+                                    <div class="pattern-1" style="background-image: url(assets/images/shape/shape-45.png);"></div>
+                                    <div class="pattern-2" style="background-image: url(assets/images/shape/shape-46.png);"></div>
+                                </div>
+                                <figure class="icon-box"><img class="our-product" src="{% static '/img_new/item8.jpg' %}" alt=""></figure>
+                                <h3><a href="#">Ayurveda Item 8</a></h3>
+                                <div class="link"><a href="#"><i class="icon-Arrow-Right"></i></a></div>
+                                <div class="btn-box"><a href="#" class="theme-btn-one">View Item<i class="icon-Arrow-Right"></i></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        <!-- category-section end -->
+
+
+
+
+      
+
+
+    
+
+        
+
+
+       
+
+        <!-- JavaScript -->
+
+        <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.min.css" rel="stylesheet"/>
+    <link href='https://fonts.googleapis.com/css?family=Oregano' rel='stylesheet' type='text/css'>
+
+        <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.min.js"></script>
+  <script language="javascript">
+      $(function() {
+          toastr.options = {
+             "closeButton": true,
+             "debug": false,
+             "positionClass": "toast-bottom-right",
+             "showDuration": "300",
+             "hideDuration": "1000",
+             "timeOut": "0",
+             "extendedTimeOut": "1000",
+             "showEasing": "swing",
+             "hideEasing": "linear",
+             "showMethod": "fadeIn",
+             "hideMethod": "fadeOut"
+          }
+    toastr.info("<p'>Cookies help us deliver our services. By using our services, you agree to our use of cookies. <a href='#' target='_new'>More details</a></p>");
+      });
+  </script>
+
+        <!-- JavaScript -->
+        
+
+{% endblock %}
